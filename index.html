@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<title>Every Shooting</title>
+		<meta name="author" content="Chris Henrick">
+		<meta name="description" content="Reframing Gun Violence">
+	  	<meta name="viewport" content="width=device-width">
+		<!-- Date:  -->
+		<link rel="stylesheet" type="text/css" href="css/normalize.css">
+		<link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
+		<link rel="stylesheet" media="screen" href="http://openfontlibrary.org/face/letterng" rel="stylesheet" type="text/css"/>
+		<link rel="icon" href="favicon.ico" />
+		<!--[if lt IE 9]>
+			<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+		<script>
+		function resizeImages() {
+			$(".hook-bg").height($(".hook-bg").width() / 1.3);
+		}
+		$(window).resize(resizeImages);
+		$(document).ready(function() {
+			resizeImages();
+
+			$("#navbar a").click(function() {
+    			$('a').removeClass('active');
+    			$('#nav-' + this.attr("href").substr(1)).addClass('active');
+			});
+
+			var stickyTop = $('#navbar').offset().top; // returns number 
+ 
+  			$(window).scroll(function(){ // scroll event  
+ 				var windowTop = $(window).scrollTop(); // returns number
+ 
+    			if (stickyTop < windowTop) {
+      				$('#navbar').css({ position: 'fixed', top: 0 });
+    			} else {
+      				$('#navbar').css('position','static');
+    			}
+  			});
+
+  			var sections = {},
+  			_height  = $(window).height(),
+  			i        = 0;
+
+		    // Grab positions of our sections 
+		    $('section').each(function(){
+		    	sections[this.id] = $(this).offset().top;
+		    });
+
+		    $(document).scroll(function(){
+		    	var $this = $(this),
+		    	pos   = $this.scrollTop();
+
+		    	for (i in sections) {
+		    		if (sections[i] > pos && sections[i] < pos + _height){
+		    			$('a').removeClass('active');
+		    			$('#nav-' + i).addClass('active');
+		    		}  
+		    	}
+		    });
+		});
+		</script>
+	    <script src="js/main.js"></script>
+</head>
+	<body>
+			<div id="title-navbar">
+				<h1>EveryShooting.org</h1>
+				<ul id="navbar">
+					<li><a id="nav-every-shooting" href="#every-shooting">Every shooting</a></li>
+					<li><a id="nav-what-goes-up" href="#what-goes-up">What Goes Up</a></li>
+					<li><a id="nav-hurt-people" href="#hurt-people">Hurt People</a></li>
+					<li><a id="nav-check-status" href="#check-status">Check your status</a></li>
+				</ul>
+			</div>
+
+			<div id="hooks">
+
+				<section id="every-shooting">
+					<div class="hook-bg" style="background-image:url(svg/every-shooting.svg);">
+					</div>
+					<div class="arrow-container">
+						<div class="arrow">&#9664;</div>
+					</div>
+					<div class="hook-body">
+						<div class="column-left">
+							<h2>Every shooting is a mass shooting</h2>
+							<p>Four-year-old Will hears gunshots outside of his window. He gets scared and cries himself to sleep. Gunshots become a familiar neighborhood sound. By sixteen, he has his own gun. So do all of his friends. One bullet shatters more lives than you think.</p>
+						</div>
+						<div class="column">
+							<h3>Check your status</h3>
+							<p>Are you concerned that you or someone you know could be shot?</p>
+							<p>Do you ever feel like you might not survive your teenage years?</p>
+						</div>
+					</div>
+				</section>
+
+				<section id="what-goes-up">
+					<div class="hook-bg" style="background-image:url(svg/what-goes-up.svg);"></div>
+					<div class="arrow-container">
+						<div class="arrow">&#9664;</div>
+					</div>
+					<div class="hook-body">
+						<div class="column-left">
+							<h2>What goes up, comes down.</h2>
+							<p>Malcolm and his friends shoot bullets recklessly into the air from a fire escape on New Years Eve. They don’t think about where the bullets will land. But what goes up, must come down. </p>
+						</div>
+						<div class="column">
+							<h3>Check your status</h3>
+							<p>Have you, a family member, or friend been injured or killed by a gun?</p>
+							<p>What do you do when you or a friend is harmed?</p>
+						</div>
+					</div>
+				</section>
+
+				<section id="hurt-people">
+					<div class="hook-bg" style="background-image:url(svg/hurt-people.svg);"></div>
+					<div class="arrow-container">
+						<div class="arrow">&#9664;</div>
+					</div>
+					<div class="hook-body">
+						<div class="column-left">
+							<h2>Hurt people hurt people</h2>
+							<p>Damon grows up in an abusive home. As a child, he see his dad knock his mom’s teeth out. He never forgets it. He never talks about it. Violence becomes the only way to react to conflict. The cycle is contagious. </p>
+						</div>
+						<div class="column">
+							<h3>Check your status</h3>
+							<p>Do you feel detached from the consequences of your actions?</p>
+							<p>Do you ever feel depressed because of your everyday problems?</p>
+						</div>
+					</div>
+				</section>
+
+				<section id="check-status">
+					<div class="hook-bg" style="background-image:url(svg/check-status.svg);"></div>
+					<div class="arrow-container">
+						<div class="arrow">&#9664;</div>
+					</div>
+					<div class="hook-body">
+						<div class="column-left">
+							<h2>Resources</h2>
+							<p>A loaded gun affects everyone. Open the door to conversation and raise public awareness around the unaddressed trauma associated with gun violence. Here are a few places to get help or support someone who is a victim of gun violence:</p>
+						</div>
+
+						<div class="column">
+								<ul>
+									<li><a href="http://www.soscrownheights.org/">Save Our Streets</a></li>
+									<li><a href="http://fortunesociety.org/">The Fortune Society</a></li>
+									<li><a href="http://cureviolence.org/">Cure Violence</a></li>
+									<li><a href="http://www.ceasefirepa.org/splash">Cease Fire</a></li>
+									<li><a href=""></a></li>
+									<li><a href="http://www.usdreamacademy.org/">U.S. Dream Acacemy</a></li>
+									<li><a href="http://interrupters.kartemquin.com/">The Interrupters</a></li>
+								</ul>
+						</div>
+					</div>
+				</section>
+
+			</div>
+	</body>
+</html>

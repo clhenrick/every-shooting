@@ -1,0 +1,211 @@
+html, body {
+	background-color: white;
+	overflow-x: hidden;
+	overflow-y: auto;	
+}
+
+#title-navbar {
+	width: 90%;
+	margin: 0 auto;
+	text-transform: uppercase;
+}
+
+
+h1 {
+	width: 100%;
+	font-family: "Knockout-HTF48-Featherweight", Impact, Haettenschweiler, "Franklin Gothic Bold", Charcoal, "Helvetica Inserat", "Bitstream Vera Sans Bold", "Arial Black", sans serif;
+	font-size: 4em;
+	text-align: left;
+	color: white;
+	background-color: #000;
+	margin: 0px;
+	font-size: 80px;
+	line-height: 31px;
+	padding: .8em 5% 1em;
+	letter-spacing: 1px;
+}
+
+/*
+ * Title and Navbar
+ */
+
+#title-navbar {
+	position: absolute;
+	top: 0px;
+	width: 100%;
+}
+
+#navbar {
+	display: block;
+	list-style: none;
+	width: 100%;
+	margin: 0;
+	padding: 1em 10% 1em;
+	background-color: #fff;
+	z-index: 2;
+}
+
+#navbar li{
+	font-family: "Knockout-HTF51-Middleweight", Impact, Haettenschweiler, "Franklin Gothic Bold", Charcoal, "Helvetica Inserat", "Bitstream Vera Sans Bold", "Arial Black", sans serif;
+	text-transform: uppercase;
+	display: inline-block;
+	width: 20%;
+	text-align: center;
+	padding-top: 0.3em;
+}
+
+#navbar li a {
+	text-decoration: none;
+	line-height: 1em;
+	padding: 2%;
+	font-size: 24px;
+	color: #000;
+}
+
+#navbar li a.active {
+	color: #f00;
+}
+
+/*
+ * Hooks and Stories
+ */
+
+ #hooks {
+ 	position: absolute;
+ 	top: 240px;
+ }
+
+ .hook-bg {
+ 	width:100%;
+	top:0;
+	left:0;
+	bottom:0;
+	right:0;
+	background-repeat: no-repeat;
+	background-size: 101%;
+	background-position: -1px 0;
+ }
+
+ .arrow-container {
+ 	background-color: #f4f4f4;
+ 	width: 100%;
+ 	height: 42px;
+ 	text-align: center;
+ 	font-size: 30px;
+ }
+
+ .arrow {
+ 	-webkit-transform:rotate(-90deg); 
+ 	 transform: rotate(-90deg);
+ 	display: inline-block;
+ }
+
+ #every-shooting {
+ 	width: 100%;
+ }
+
+.hook {
+	left:5%;
+	height: 900px;
+	padding: 5% 10%;
+	margin: 5%;
+}
+
+.hook-body {
+	vertical-align: top;
+}
+
+.column-left, .column {
+	display: inline-block;
+	vertical-align: top;
+}
+
+.column-left {
+	width: 50%;
+	padding-left: 5em;
+	padding-top: 2em;
+	padding-bottom: 10%;
+}
+
+h2 {
+	margin-top: 0;
+	margin-bottom: 0.2em;
+	color: red;
+	font-size: 42px;
+}
+
+.column-left p, a {
+	color: #000;
+	font-size: 18px;
+	margin-top: 0;
+}
+
+.column ul {
+	list-style: none;
+	color:#000;
+}
+
+.column li {
+	margin-bottom: .5em;
+}
+
+.column ul li a {
+	text-decoration: none;
+	line-height: .5em;
+	color: #f00;
+	padding-bottom: .5em;
+}
+
+.column ul li a:hover {
+	text-decoration: underline;
+}
+
+h2, h3 {
+	font-family: "Knockout";
+	font-weight: 100;
+}
+
+h3 {
+	font-size: 24px;
+	margin: 0;
+}
+
+.column {
+	font-size: 16px;
+	line-height: 18px;
+	width: 25%;
+
+	border-left: 1px solid black;
+	padding-left: 1.5em;
+	min-height: 16em;
+
+	margin-top: 3.15em;
+	margin-bottom: 3em;
+	margin-left: 10%;
+}
+
+@media only screen and (max-width: 690px) {
+	#navbar {
+		padding-left: 0;
+	}
+	#navbar li {
+		width: 48%;
+		margin-bottom: 1em;
+	}
+}
+
+
+@media only screen and (max-width: 480px) {
+	.hook {
+		width: 100px;
+	}
+
+	.hook p { 
+		font-size: 5em;
+	}
+
+	.column {
+		border: none;
+		margin: 1em 10%
+	}
+}
