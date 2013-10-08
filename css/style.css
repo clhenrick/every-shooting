@@ -8,10 +8,11 @@ html, body {
 	width: 90%;
 	margin: 0 auto;
 	text-transform: uppercase;
+	z-index: 2; 
 }
 
 
-h1 {
+#title {
 	width: 100%;
 	font-family: "Knockout-HTF48-Featherweight", Impact, Haettenschweiler, "Franklin Gothic Bold", Charcoal, "Helvetica Inserat", "Bitstream Vera Sans Bold", "Arial Black", sans serif;
 	font-size: 4em;
@@ -21,13 +22,16 @@ h1 {
 	margin: 0px;
 	font-size: 80px;
 	line-height: 31px;
-	padding: .8em 5% 1em;
+	padding: .5em 5% .7em;
 	letter-spacing: 1px;
 }
 
-/*
- * Title and Navbar
- */
+#logo {
+	width:25%;
+	padding: 0px;
+	margin: 0px;
+}
+
 
 #title-navbar {
 	position: absolute;
@@ -40,9 +44,10 @@ h1 {
 	list-style: none;
 	width: 100%;
 	margin: 0;
-	padding: 1em 10% 1em;
+	padding: .7em 10% 1.20em;
 	background-color: #fff;
-	z-index: 2;
+	z-index: 3;
+	border: 0px blue solid;
 }
 
 #navbar li{
@@ -51,13 +56,13 @@ h1 {
 	display: inline-block;
 	width: 20%;
 	text-align: center;
-	padding-top: 0.3em;
+	padding-top: 0.2em;
 }
 
 #navbar li a {
 	text-decoration: none;
 	line-height: 1em;
-	padding: 2%;
+	padding: .1em;
 	font-size: 24px;
 	color: #000;
 }
@@ -72,7 +77,8 @@ h1 {
 
  #hooks {
  	position: absolute;
- 	top: 240px;
+ 	width: 100%;
+ 	top: 13.3em;
  }
 
  .hook-bg {
@@ -82,14 +88,16 @@ h1 {
 	bottom:0;
 	right:0;
 	background-repeat: no-repeat;
-	background-size: 101%;
-	background-position: -1px 0;
+	background-size: 102%;
+	background-position: -5px 0;
+	z-index: -1;
  }
 
  .arrow-container {
  	background-color: #f4f4f4;
  	width: 100%;
  	height: 42px;
+ 	top: 0px;
  	text-align: center;
  	font-size: 30px;
  }
@@ -100,16 +108,8 @@ h1 {
  	display: inline-block;
  }
 
- #every-shooting {
- 	width: 100%;
- }
 
-.hook {
-	left:5%;
-	height: 900px;
-	padding: 5% 10%;
-	margin: 5%;
-}
+
 
 .hook-body {
 	vertical-align: top;
@@ -184,7 +184,41 @@ h3 {
 	margin-left: 10%;
 }
 
-@media only screen and (max-width: 690px) {
+.column p {
+	font-style: italic;
+}
+
+@media only screen and (max-width: 1160px) {
+	
+	#logo {
+		width:30%;
+	}
+
+	#navbar {
+		padding-left: 0;
+	}
+	
+	#navbar li {
+		width: 48%;
+		margin-bottom: 1em;
+	}
+
+	#hooks {
+		top: 16em;
+	}
+}
+
+
+@media only screen and (max-width: 740px) {
+
+	#title {
+		padding: .3em 5% .5em;
+	}
+
+	#logo {
+		width:50%;
+	}
+
 	#navbar {
 		padding-left: 0;
 	}
@@ -192,20 +226,56 @@ h3 {
 		width: 48%;
 		margin-bottom: 1em;
 	}
+
+	#hooks {
+		top: 13.8em;
+	}
+
+	.hook-body {
+		width: 100%
+
+	}
+
+	.column-left, .column {
+		width: 100%;
+		padding: 1em 1em 0 1em;
+		margin: 1em 1em 0 1em;
+		border: none;
+	}
+
+	.column-left p {
+		width: 80%;
+	}
+
+	.column-left h2 {
+		width: 75%;
+	}
+
+	.column p {
+
+		font-size: 1.1em;
+		width: 80%;
+	}
+
+	.column ul {
+		padding: 0;
+		height: 74px;
+	}
+
 }
 
 
 @media only screen and (max-width: 480px) {
-	.hook {
-		width: 100px;
+	#hooks{
+		top: 15.3em;
 	}
 
-	.hook p { 
-		font-size: 5em;
+	.hook-body{
+		display: block;
 	}
 
 	.column {
 		border: none;
-		margin: 1em 10%
+		width: 80%;
 	}
 }
